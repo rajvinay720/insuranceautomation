@@ -33,7 +33,9 @@ public class InsuranceSteps {
 
     @Given("User is on the insurance portal homepage")
     public void user_is_on_homepage() {
-        System.setProperty("webdriver.chrome.driver", "Driver/chromedriver.exe");
+    	System.setProperty("webdriver.chrome.driver", "C:\\Users\\rajvi\\Downloads\\seleniumcucumproject\\Driver\\chromedriver.exe");
+
+       // System.setProperty("webdriver.chrome.driver", "Driver/chromedriver.exe");
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("http://localhost:3000");
@@ -50,6 +52,8 @@ public class InsuranceSteps {
         System.out.println(userType + " Registered: " + email + " | Password: " + password);
         logCredentialsToFile(userType, email, password);
     }
+    
+    
 	/*
 	 * @When("User navigates to {string} and registers with {string} and {string}")
 	 * public void user_navigates_to_and_registers_with_and(String userType, String
